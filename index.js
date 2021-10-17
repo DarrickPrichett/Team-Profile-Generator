@@ -1,8 +1,9 @@
 const inquirer = require('inquirer');
-const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
+const Employee = require('./lib/Employee');
+var employees = [];
 
 function entryPoint() {
     inquirer
@@ -45,10 +46,25 @@ function entryPoint() {
                         return false;
                     }
                 }
-            }
+            },
+            {
+                type: 'number',
+                name: 'officePhone',
+                message: 'What is your Office Telephone Number? (Required)',
+                validate: officePhoneInput => {
+                    if (officePhoneInput) {
+                        return true;
+                    } else {
+                        console.log('Please enter your Office Telephone Number!');
+                        return false;
+                    }
+                }
+            },
         ])
         .then((answers) => {
-            const manager = new Manager(answers.name, answers.id, answers.email)
+            const manager = new Manager(answers.name, answers.id, answers.email, answers.officePhone)
+            employees.push(Manager);
+            console.log(Manager);
             promtNewEmployee()
         });
 
@@ -66,10 +82,8 @@ const promtNewEmployee = () => {
         ])
         .then((answers) => {
             if (answers.role === 'Engineer') {
-                console.log("Eng this is where we would put functionality here")
                 promptNewEngineer()
             } else if (answers.role === 'Intern') {
-                console.log("Int this is where we would put functionality here")
                 promptNewIntern()
             } else if (answers.role === 'Finish building my team') {
                 console.log("build our team")
@@ -136,9 +150,12 @@ const promptNewEngineer = () => {
     // use engineer constructor to create eng
         .then((answers) => {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
+            employees.push(Engineer);
+            console.log(Engineer);
+            promtNewEmployee()
         });
     // push engineer constructor to overall array
-    promtNewEmployee()
+    
 }
 const promptNewIntern = () => {
     console.log('ask int question')
@@ -200,9 +217,12 @@ const promptNewIntern = () => {
     // use intern constructor to create eng
         .then((answers) => {
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school)
+            employees.push(Intern);
+            console.log(Intern);
+            promtNewEmployee()
         });
     // push intern constructor to overall array
-    promtNewEmployee()
+    
 }
 
-entryPoint();
+entryPoint()

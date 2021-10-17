@@ -12,7 +12,7 @@ const generateTeam = Team => {
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${manager.getID()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.}</li>
+                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail}</li>
                 <li class="list-group-item">Office number: ${manager.getOfficeNumber()}</li>
             </ul>
         </div>
@@ -32,7 +32,7 @@ const generateTeam = Team => {
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${engineer.getID()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.}</li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail}</li>
                 <li class="list-group-item">GitHub: <a href="https://github}</li>
             </ul>
         </div>
@@ -51,15 +51,15 @@ const generateTeam = Team => {
     <div class="card-body">
         <div class="card-body">
             <ul class="list-group">
-                <li class="list-group-item">ID: ${Intern.getID()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${Intern.getEmail()}">${manager.}</li>
-                <li class="list-group-item">School: ${Intern.school}</li>
+                <li class="list-group-item">ID: ${intern.getID()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail}</li>
+                <li class="list-group-item">School: ${intern.school}</li>
             </ul>
         </div>
     </div>
         `;
     };
-    
+
     const html = [];
 
     html.push(team
@@ -77,7 +77,7 @@ const generateTeam = Team => {
         .join("")
     );
 
-        return html.join("");
+    return html.join("");
 
 }
 
