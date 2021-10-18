@@ -4,6 +4,7 @@ const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 const Employee = require('./lib/Employee');
 const pageTemplate = require('./src/page-template')
+const fs = require("fs");
 var employees = [];
 
 function entryPoint() {
@@ -89,9 +90,10 @@ const promtNewEmployee = () => {
             } else if (answers.role === 'Finish building my team') {
                 console.log("build our team")
                 pageTemplate(answers)
+                writeToFile(answers)
+                }
                 function writeToFile(pageTemplate, data) {
                     return fs.writeFileSync(path.join(process.cwd(),pageTemplate),data);
-                }
             }
         })
 }
