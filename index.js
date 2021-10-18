@@ -89,7 +89,9 @@ const promtNewEmployee = () => {
             } else if (answers.role === 'Finish building my team') {
                 console.log("build our team")
                 pageTemplate(answers)
-                
+                function writeToFile(pageTemplate, data) {
+                    return fs.writeFileSync(path.join(process.cwd(),pageTemplate),data);
+                }
             }
         })
 }
