@@ -3,6 +3,7 @@ const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 const Employee = require('./lib/Employee');
+const pageTemplate = require('./src/page-template')
 var employees = [];
 
 function entryPoint() {
@@ -64,7 +65,7 @@ function entryPoint() {
         .then((answers) => {
             const manager = new Manager(answers.name, answers.id, answers.email, answers.officePhone)
             employees.push(Manager);
-            console.log(Manager);
+            console.log('----------------->', manager);
             promtNewEmployee()
         });
 
@@ -87,6 +88,8 @@ const promtNewEmployee = () => {
                 promptNewIntern()
             } else if (answers.role === 'Finish building my team') {
                 console.log("build our team")
+                pageTemplate(answers)
+                
             }
         })
 }
@@ -151,7 +154,7 @@ const promptNewEngineer = () => {
         .then((answers) => {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
             employees.push(Engineer);
-            console.log(Engineer);
+            console.log('----------------->', engineer)
             promtNewEmployee()
         });
     // push engineer constructor to overall array
@@ -218,7 +221,7 @@ const promptNewIntern = () => {
         .then((answers) => {
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school)
             employees.push(Intern);
-            console.log(Intern);
+            console.log('----------------->', intern)
             promtNewEmployee()
         });
     // push intern constructor to overall array

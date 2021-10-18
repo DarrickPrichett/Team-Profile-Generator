@@ -21,7 +21,7 @@ const generateTeam = Team => {
     };
 
     // create the engineers card in html
-    const generateEngineer = engineer => {
+    let generateEngineer = engineer => {
         return `
         <div class="card employee-card">
     <div class="card-header">
@@ -41,7 +41,7 @@ const generateTeam = Team => {
     };
 
     // create the intern card in html
-    const generateIntern = Intern => {
+    let generateIntern = Intern => {
         return `
         <div class="card employee-card">
     <div class="card-header">
