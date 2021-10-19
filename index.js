@@ -5,6 +5,7 @@ const Engineer = require('./lib/Engineer');
 const Employee = require('./lib/Employee');
 const pageTemplate = require('./src/page-template')
 const fs = require("fs");
+const path = require("path");
 var employees = [];
 
 function entryPoint() {
@@ -24,7 +25,7 @@ function entryPoint() {
                 }
             },
             {
-                type: 'number',
+                type: 'input',
                 name: 'id',
                 message: 'What is your I.D Number? (Required)',
                 validate: idInput => {
@@ -89,8 +90,8 @@ const promtNewEmployee = () => {
                 promptNewIntern()
             } else if (answers.role === 'Finish building my team') {
                 console.log("build our team")
-                pageTemplate(answers)
-                writeToFile(answers)
+                pageTemplate(employees)
+                writeToFile(employees)
                 }
                 function writeToFile(pageTemplate, data) {
                     return fs.writeFileSync(path.join(process.cwd(),pageTemplate),data);
@@ -115,7 +116,7 @@ const promptNewEngineer = () => {
                 }
             },
             {
-                type: 'number',
+                type: 'input',
                 name: 'id',
                 message: 'What is the new Engineer I.D Number? (Required)',
                 validate: idInput => {
