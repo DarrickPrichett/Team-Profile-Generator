@@ -1,5 +1,5 @@
 // create the team
-const generateTeam = Team => {
+const generateTeam = team => {
 
     // create the manager card in html
     const generateManager = manager => {
@@ -102,6 +102,13 @@ module.exports = team => {
         <div class="row">
             <div class="col-12 jumbotron mb-3 team-heading">
                 <h1 class="text-center">My Team</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="team-area col-12 d-flex justify-content-center">
+                ${generateTeam(team)}
             </div>
         </div>
     </div>

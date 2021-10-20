@@ -66,7 +66,7 @@ function entryPoint() {
         ])
         .then((answers) => {
             const manager = new Manager(answers.name, answers.id, answers.email, answers.officePhone)
-            employees.push(Manager);
+            employees.push(manager);
             console.log('----------------->', manager);
             promtNewEmployee()
         });
@@ -157,7 +157,7 @@ const promptNewEngineer = () => {
     // use engineer constructor to create eng
         .then((answers) => {
             const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github)
-            employees.push(Engineer);
+            employees.push(engineer);
             console.log('----------------->', engineer)
             promtNewEmployee()
         });
@@ -224,7 +224,7 @@ const promptNewIntern = () => {
     // use intern constructor to create eng
         .then((answers) => {
             const intern = new Intern(answers.name, answers.id, answers.email, answers.school)
-            employees.push(Intern);
+            employees.push(intern);
             console.log('----------------->', intern)
             promtNewEmployee()
         });
