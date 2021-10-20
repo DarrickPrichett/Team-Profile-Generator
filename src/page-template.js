@@ -41,7 +41,7 @@ const generateTeam = team => {
     };
 
     // create the intern card in html
-    let generateIntern = Intern => {
+    let generateIntern = intern => {
         return `
         <div class="card employee-card">
     <div class="card-header">
