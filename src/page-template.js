@@ -94,7 +94,7 @@ module.exports = team => {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"/>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/c582137733.js"</script>
+    <script src="https://kit.fontawesome.com/c582137733.js"></script>
   </head>
 
   <body>

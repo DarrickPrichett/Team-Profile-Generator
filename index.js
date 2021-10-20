@@ -90,11 +90,10 @@ const promtNewEmployee = () => {
                 promptNewIntern()
             } else if (answers.role === 'Finish building my team') {
                 console.log("build our team")
-                pageTemplate(employees)
-                writeToFile(employees)
-                }
-                function writeToFile(pageTemplate, data) {
-                    return fs.writeFileSync(path.join(process.cwd(),pageTemplate),data);
+                writeToFile(pageTemplate, employees)
+            }
+            function writeToFile(pageTemplate, data) {
+                return fs.writeFileSync(path.join(process.cwd(), 'team.html'), pageTemplate(data));
             }
         })
 }
