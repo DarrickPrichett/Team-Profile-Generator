@@ -51,7 +51,7 @@ function entryPoint() {
                 }
             },
             {
-                type: 'number',
+                type: 'input',
                 name: 'officePhone',
                 message: 'What is your Office Telephone Number? (Required)',
                 validate: officePhoneInput => {
@@ -182,7 +182,7 @@ const promptNewIntern = () => {
                 }
             },
             {
-                type: 'number',
+                type: 'input',
                 name: 'id',
                 message: 'What is the new Intern I.D Number? (Required)',
                 validate: idInput => {

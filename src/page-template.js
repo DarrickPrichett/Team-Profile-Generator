@@ -46,7 +46,7 @@ const generateTeam = team => {
         <div class="card employee-card">
     <div class="card-header">
         <h2 class="card-title">${intern.getName()}</h2>
-        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
+        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${intern.getRole()}</h3>
     </div>
     <div class="card-body">
         <div class="card-body">
