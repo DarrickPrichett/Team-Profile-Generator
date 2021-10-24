@@ -12,7 +12,7 @@ const generateTeam = team => {
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${manager.getID()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail}</li>
+                <li class="list-group-item">Email: ${manager.getEmail()}</li>
                 <li class="list-group-item">Office number: ${manager.getOfficeNumber()}</li>
             </ul>
         </div>
@@ -23,7 +23,7 @@ const generateTeam = team => {
     // create the engineers card in html
     let generateEngineer = engineer => {
         return `
-        <div class="card employee-card">
+    <div class="card employee-card">
     <div class="card-header">
         <h2 class="card-title">${engineer.getName()}</h2>
         <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>
@@ -32,7 +32,7 @@ const generateTeam = team => {
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${engineer.getID()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail}</li>
+                <li class="list-group-item">Email: ${engineer.getEmail()}</li>
                 <li class="list-group-item">GitHub: <a href="https://github}</li>
             </ul>
         </div>
@@ -43,7 +43,7 @@ const generateTeam = team => {
     // create the intern card in html
     let generateIntern = intern => {
         return `
-        <div class="card employee-card">
+    <div class="card employee-card">
     <div class="card-header">
         <h2 class="card-title">${intern.getName()}</h2>
         <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${intern.getRole()}</h3>
@@ -52,7 +52,7 @@ const generateTeam = team => {
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${intern.getID()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail}</li>
+                <li class="list-group-item">Email: ${intern.getEmail()}</li>
                 <li class="list-group-item">School: ${intern.school}</li>
             </ul>
         </div>
@@ -93,7 +93,7 @@ module.exports = team => {
     <title>My Team!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"/>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
     <script src="https://kit.fontawesome.com/c582137733.js"></script>
   </head>
 

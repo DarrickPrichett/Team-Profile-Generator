@@ -92,11 +92,14 @@ const promtNewEmployee = () => {
                 console.log("build our team")
                 writeToFile(pageTemplate, employees)
             }
-            function writeToFile(pageTemplate, data) {
-                return fs.writeFileSync(path.join(process.cwd(), 'team.html'), pageTemplate(data));
-            }
+            
         })
 }
+
+function writeToFile(pageTemplate, data) {
+    return fs.writeFileSync(path.join(process.cwd(), 'team.html'), pageTemplate(data));
+}
+
 const promptNewEngineer = () => {
     console.log('ask eng question')
     inquirer
