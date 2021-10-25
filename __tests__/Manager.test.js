@@ -1,7 +1,7 @@
 const Manager = require("../lib/Manager");
 
-text("Can set office telephone number of the Manager", () => {
-    const testValue = "Office-phone";
-    const e = new Manager("Foo", 1, "test@test.com", testValue);
-    expect(e.Office-phone).toBe(testValue);
+test('Create and manager object', () => {
+    const manager = new Manager('Darrick', '94847', 'dp@work.com', '1234567890' );
+
+    expect(manager.officeNumber).toBe('1234567890');
 });
