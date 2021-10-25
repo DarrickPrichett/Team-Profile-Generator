@@ -4,7 +4,7 @@ const generateTeam = team => {
     // create the manager card in html
     const generateManager = manager => {
         return `
-        <div class="card employee-card">
+        <div class="employee-card">
         <div class="card-header">
             <h2 class="card-title">${manager.getName()}</h2>
             <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.getRole()}</h3>
@@ -23,7 +23,7 @@ const generateTeam = team => {
     // create the engineers card in html
     let generateEngineer = engineer => {
         return `
-    <div class="card employee-card">
+    <div class="employee-card">
     <div class="card-header">
         <h2 class="card-title">${engineer.getName()}</h2>
         <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.getRole()}</h3>

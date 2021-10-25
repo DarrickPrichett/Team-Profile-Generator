@@ -101,7 +101,7 @@ function writeToFile(pageTemplate, data) {
 }
 
 const promptNewEngineer = () => {
-    console.log('ask eng question')
+    console.log('ask engineer questions')
     inquirer
         .prompt([
             {
@@ -168,7 +168,7 @@ const promptNewEngineer = () => {
     
 }
 const promptNewIntern = () => {
-    console.log('ask int question')
+    console.log('ask intern questions')
     inquirer
         .prompt([
             {
