@@ -10,7 +10,7 @@ AS A manager, I want to generate a webpage that displays my team's basic info so
 *JavaScript *Node.js *Inquirer *Jest
 
 # Website
-
+https://watch.screencastify.com/v/M5xpR2pluhPyH7930jMe
 
 # Contribution
 Made by: Darrick Prichett
